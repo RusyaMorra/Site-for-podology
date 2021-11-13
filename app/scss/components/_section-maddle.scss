@@ -1,0 +1,448 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+
+
+
+.section-maddle{
+    width: 100%;
+    background-image: url('../../assets/images/templates/размытыйфон2.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.section-wrapper-center{
+    max-width: 1902px;
+    height: 3516px;
+    background-image: url('../../assets/images/templates/center2.png');
+    background-size: cover;
+    background-position:center;
+    margin:0px auto ;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.container-wrapper{
+    width: 100%;
+    height: 27%;
+    @extend %flex-derectionrow-and-center2-spasearound;
+}
+
+.content-wrapper-left{
+    height: 50%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.container-wrapper__heading-text{
+    @include titles(2.1rem,"OpenSans-Medium");
+    background: linear-gradient(45deg,$color7slider,#604453,blueviolet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+}
+
+.span1{
+    @include titles(4.1rem,"legendec");
+    background: linear-gradient(45deg,$color7slider,#604453,blueviolet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.container-wrapper__down-text{
+    @include titles(1.5rem,"OpenSans-Medium");
+    margin-top: 30px;
+    color: $color7slider;
+    line-height: 1.5;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container-wrapper__down-text::before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 10px ;
+    top: 0px;
+    background-color: $color7slider;
+    left: 0px;
+}
+.container-wrapper__down-text::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 10px ;
+    bottom: 0px;
+    background-color: $color7slider;
+    left: 0px;
+}
+
+
+
+
+.call-text{
+    width: 300px;
+    @include titles(1.5rem,"OpenSans-Medium");
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.btn-call {
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    text-decoration: none;
+    @extend %flex-center2; 
+    font-size:30px;
+    cursor:pointer;
+    background-color:#fff;
+    @include titles(1.7rem,"OpenSans-Medium");
+    color:$color7slider;
+    outline:0 none;
+    border-radius:8px;
+    border:0px;
+    clip-path:polygon(15% 5%, 95% 5%, 85% 95%, 5% 95%);
+    background-image:linear-gradient(45deg, rgba(255,255,255,0) 30%, $color7slider, rgba(255,255,255,0) 70%),radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 50%, rgba(0,0,0,0) 50%);
+    background-repeat:no-repeat;
+    background-size:200% 100%, auto;
+    background-position:200% 0, 0 0;
+    text-shadow:-1px -1px #000;
+    user-select:none;
+    animation: pulse 3s ease-in-out ;
+    border:$color7slider 2px solid;
+}
+
+.btn-call:active{
+    bottom:20px;
+    box-shadow:none
+}
+.btn-call:hover{
+    transition:.5s linear;
+    background-position:-200% 0, 0 0;
+}
+
+
+
+.container-wrapper-arrow{
+    width: 100%;
+    height: 5%;
+}
+.container-wrapper__arrow-img{
+    margin-left:400px;
+    margin-top: -140px;
+    animation: pulse  2s ease-in-out infinite;
+}
+
+.container-wrapper__contact-items{
+    width: 50%;
+    height: 230px;
+    background-image: url('../../assets/images/templates/background3.png');
+    background-size:cover;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+    opacity: .9;
+    border-radius: 5px;
+    padding: 10px 0px 10px;
+    background-attachment:fixed;
+
+}
+.container-wrapper-number{
+    width: 100%;
+    height: 44%;
+}
+
+.link{
+    @include titles(2.5rem,"OpenSans-Medium"); 
+    color: white;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.name{
+    margin-top: 40px;
+    color: white;
+    @include titles(1.8rem,"OpenSans-Medium");
+}
+.prof{
+    margin-top: 30px;
+    color: white;
+    @include titles(2.7rem,"legendec");
+    
+}
+
+.finger-wrapper{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.finger-wrapper-content{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.finger-wrapper__title{
+    @include titles(1.9rem,"OpenSans-Medium"); 
+}
+
+.finger-wrapper__images{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.finger-wrapper__img-finger{
+    width: 20%;
+    border-radius: 50%;
+    border:$color7slider 3px solid;
+    animation:  pulse 5s ease-in-out infinite;
+    transition: 3s;
+}   
+
+
+.finger-wrapper__img-finger--animate{
+    animation: updown 2s ease-in-out infinite;
+    transition: 3s;
+} 
+
+.adress-wrapper{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+
+.adress{
+    color: white;
+    @include titles(1.7rem,"OpenSans-Medium");
+    background-image: url('../../assets/images/templates/background3.png');
+    background-size:cover;
+    padding: 70px;
+    opacity: .9;     
+    border-radius: 5px;
+    background-attachment:fixed;
+}
+
+.container-wrapper__arrow-img2{
+   margin-bottom: 80px;
+   animation: pulse2  2s ease-in-out infinite;
+}
+
+
+.slider-wrapper{
+    width: 100%;
+    height: 830px;
+}  
+
+ .slider__item-img{
+     width: 90%;
+     height: 500px;
+     border-radius: 10px;
+ } 
+
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -80px;
+    top: 220px;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 0px;
+    background-image: url('../../assets/images/arrowslider.png') ;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right:  -50px;
+    transform: rotate(180deg);
+    top: 220px;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 0px;
+    background-image: url('../../assets/images/arrowslider.png') ;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.section-midsetivikat {
+    width: 100%;
+    height: 1120px;
+    position: absolute;
+    background-image: url('../../assets/images/templates/background3.png');
+    background-size:cover;
+    background-position:bottom;
+    margin:0px auto;
+    bottom: 24px;
+    background-attachment:fixed;
+}
+
+
+
+
+.sertificats{
+    color: white;
+    @include titles(6.7rem,"legendec");
+    text-align: center;
+    margin-top: 120px;
+}
+
+
+
+.slick-dots{display: none;}

@@ -1,0 +1,89 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+
+
+
+
+.why-we-are-better{
+    width: 100%;
+    height: 300px;
+    background-image: url('../../assets/images/templates/плашка-tameplate.png');
+    background-position:center;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+
+
+
+
+.better-wrapper-left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.better-wrapper-left__text1{
+    @include titles(3.1rem,"OpenSans-Medium");
+    color: white;
+}
+.better-wrapper-left__text2{
+    @include titles(2.5rem,"Montserrat");
+    color: white;
+}
+
+.whole-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.better-wrapper-right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.better-wrapper-righ__text1{
+    @include titles(1.3rem,"OpenSans-Medium");
+    color: white;
+    line-height: 1.5rem;
+}
+
+
+.better-wrapper-righ__text2{
+    @include titles(1.3rem,"OpenSans-Medium");
+    color: white;
+    position: relative;
+    line-height: 1.5rem;
+}
+
+.better-wrapper-righ__text3{
+    @include titles(1.3rem,"OpenSans-Medium");
+    color: white;
+    line-height: 1.5rem;
+}
+.better-wrapper-righ__text2::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 200%;
+    left: -30px;
+    bottom: -30px;
+    background-color: white;
+}
+

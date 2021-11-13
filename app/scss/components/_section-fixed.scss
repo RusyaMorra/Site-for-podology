@@ -1,0 +1,57 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+.section-fixed{
+    width: 100%;
+    height: 600px;
+    background-image: url('../../assets/images/templates/nail-debridement-tre.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+
+
+.text-wrapper-fixed-section{
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+
+
+.text-wrapper-fixed-section__slogans-heading{
+    @include titles(2.3rem,"OpenSans-Medium");
+    text-align: center;
+}
+
+
+
+.text-wrapper-fixed-section__inner-wrapper{
+    margin: 0px auto;
+    width: 50%;
+    height: 70%;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.text-wrapper-fixed-section{
+    @include titles(1.7rem,"OpenSans-Medium");
+    background: linear-gradient(45deg,$color7slider,#604453,blueviolet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.img-margin{
+    margin-right: 20px;
+}

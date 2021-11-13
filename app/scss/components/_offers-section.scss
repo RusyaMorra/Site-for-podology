@@ -1,0 +1,62 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+
+
+
+.offer-section{
+    width: 100%;
+    height: 800px;
+}
+
+.text-wrapper-offer-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.text-wrapper-offer-section__inner-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.text-wrapper-offer-section__img-wrapper{
+    width: 30%;
+    height: 50%;
+    padding-top: 130px;
+    
+}
+.text-wrapper-offer-section__img{
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow:10px 10px 10px 2px  rgba($color7slider, 1) ;
+    -moz-box-shadow: 10px 10px 10px 2px  rgba($color7slider, 1) ;
+    box-shadow: 10px 10px 10px 2px rgba($color7slider, 0.9); 
+}
+
+
+.text-wrapper-offer-section__slogans-heading{
+    @include titles(4.3rem,"legendec");
+    color:$color7slider;
+}
+
+
+
+.text-wrapper-offer-section__slogan-item{
+    @include titles(2.3rem,"OpenSans-Medium");
+    color:$color7slider;
+    margin-top: 30px;
+}
+
+.link-wrapper2{
+    width: 50%;
+    float: left;
+}

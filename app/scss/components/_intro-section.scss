@@ -1,0 +1,155 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+.intro-section{
+    width: 100%;
+    background-image: url('../../assets/images/templates/рызмытыйфон1.jpg');
+    background-size: cover;
+    background-position:center;
+}
+.section-wrapper{
+    max-width: 1902px;
+    height: 671px;
+    background-image: url('../../assets/images/templates/Screenshot_11.jpg');
+    background-size: cover;
+    background-color: $color7slider;
+    background-position:center;
+    margin:0px auto ;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    background-attachment:fixed;
+
+}
+.leg-wrapper{
+    position: absolute;
+    z-index: 0;
+    top: 30px;
+    right: 0px;
+    width: 53%;
+    height: 110%;
+    animation: blockmove 3s ease-in-out ;
+}
+.intro-section__img{
+    z-index: 0;
+    bottom: 200px;
+    width: 100%;
+    height: 100%;
+    transition: 3s;
+    animation: scale, blockmove 3s ease-in-out ;
+}
+
+
+
+.left-item__outer{
+    width: 55%;
+    height: 100%;
+    @extend %flex-center2; 
+}
+
+.left-item__wrapper-inner{
+    width: 100%;
+    height: 80%;
+    @extend %flex-derectioncolumn-and-between; 
+}
+.table-wrapper{
+    background-image: url('../../assets/images/table.png');
+    width: 591px;
+    height: 371px;
+    @extend %flex-center2; 
+    animation: pulse 3s ease-in-out ;
+}
+.table-wrapper__content{
+    border-radius: 50%;
+    width:70%;
+   @extend %flex-derectioncolumn-and-between; 
+}
+.table-wrapper__img{
+    width: 30%;
+}
+.table-wrapper__text{
+    @include titles(1.2rem,"Montserrat");
+    //color: $color7slider;
+    line-height: 2rem;  
+    background: linear-gradient(45deg,$color7slider,#604453,blueviolet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.title{
+    @include titles(1.7rem,"OpenSans-Medium");
+    color: #ffffff;
+    line-height: 2rem;
+    position: relative;
+    
+}
+.title::before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:5px;
+    bottom:-13px;
+    background-color:white;
+    left: 0px
+}
+
+
+.background-gold{
+    width: 100%;
+    height: 90px;
+    position: relative;
+   
+}
+
+.background-gold__img-plate{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+.link-wrapper{
+    margin-left:90px ;
+    margin-top: 10px;
+    padding-top: 15px;
+    width:44% ;
+    height: 70%; 
+    @extend  %flexnew1;
+}
+.background-gold__button-offer{
+    width: 100%;
+    height: 50px;
+    list-style-type: none;
+    text-decoration: none;
+    @extend %flex-center2; 
+    font-size:30px;
+    cursor:pointer;
+    background-color:$color7slider;
+    @include titles(1.7rem,"OpenSans-Medium");
+    color:#fff;
+    outline:0 none;
+    border-radius:8px;
+    border:0px;
+    clip-path:polygon(15% 5%, 95% 5%, 85% 95%, 5% 95%);
+    background-image:linear-gradient(45deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.8), rgba(255,255,255,0) 70%),radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 50%, rgba(0,0,0,0) 50%);
+    background-repeat:no-repeat;
+    background-size:200% 100%, auto;
+    background-position:200% 0, 0 0;
+    text-shadow:-1px -1px #000;
+    user-select:none;
+    animation: pulse 3s ease-in-out ;
+}
+
+.background-gold__button-offer:active{
+    bottom:20px;
+    box-shadow:none
+}
+.background-gold__button-offer:hover{
+    transition:.5s linear;
+    background-position:-200% 0, 0 0;
+}
+
