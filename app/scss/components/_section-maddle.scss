@@ -407,7 +407,7 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    right:  -50px;
+    right:  -80px;
     transform: rotate(180deg);
     top: 220px;
     outline: none;
@@ -445,4 +445,14 @@
 
 
 
-.slick-dots{display: none;}
+.slick-dots {
+    display: none !important;
+}
+
+
+
+
+
+.slider__item-img{
+    margin-left:21px ;
+}

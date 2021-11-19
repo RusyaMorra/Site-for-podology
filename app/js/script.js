@@ -67,3 +67,49 @@ $(document).ready(function(){
 });
 
 
+
+
+
+
+
+
+
+/*
+
+var oldScrollY = 0;
+const header = document.getElementById('header');
+window.addEventListener('scroll', function(){
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  var dY = scrolled - oldScrollY;
+  
+  if ( dY < 0 ){
+    header.classList.add('header-top-fixed');
+  } else {
+    header.classList.remove('header-top-fixed');
+  }
+  
+  oldScrollY = scrolled;
+});
+
+*/
+
+
+
+let lastScroll = 0;
+const defaultOffset = 200;
+const header = document.getElementById('header');
+const scrollPosition=()=>window.pageYOffset || document.documentElement.scrollTop;
+const containHide=()=>header.classList.contains('header-hidden');
+window.addEventListener('scroll',()=>{
+  
+    if(scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset){
+       header.classList.add('header-hidden');
+       //console.log('down');
+    }
+    else if(scrollPosition() < lastScroll && containHide()){
+       // console.log('up');
+        header.classList.remove('header-hidden');
+        
+    }
+lastScroll = scrollPosition();
+})

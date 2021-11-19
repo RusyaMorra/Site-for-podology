@@ -1,0 +1,137 @@
+@import '../_base.scss';
+@import '../_fonts.scss';
+@import '../_reset.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+@import '../animation';
+
+
+
+.map-and-form{
+    width: 100%;
+    height: 700px;
+    background-image: url('../../assets/images/templates/foot-clinic-Worthing.jpg');
+    background-size: cover;
+    background-color: $color7slider;
+    background-position:center;
+    margin:0px auto ;
+    position: relative;
+    box-sizing: border-box;
+    background-attachment:fixed;
+}
+
+.map-and-form-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.map-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-left iframe{
+    width: 100%;
+    height: 70%;
+}
+.form-rigth{
+    height: 65%;
+    width: 45%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.guruweba_example_form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.guruweba_example_caption{
+    @include titles(2.1rem,"OpenSans-Medium");
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+form, .guruweba_example_caption, input, textarea{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+   
+  
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 0px;
+    margin-top:30px ;
+}
+
+
+.form__name{
+    @include titles(1.7rem,"OpenSans-Medium");
+    color: white;
+    margin-top: 10px;
+}
+.form__email{
+    @include titles(1.7rem,"OpenSans-Medium");
+    color: white;
+    margin-top: 10px;
+}
+.form__massage{
+    @include titles(1.7rem,"OpenSans-Medium");
+    color: white;
+    margin-top: 10px;
+}
+
+textarea[name="details"] { 
+    resize: none; 
+  } 
+
+input,
+textarea {
+    font-size: 24px;
+    padding: 5px;
+    width: 100%;
+    color: white;
+    caret-color: white;
+    text-shadow: 0px 0px 0px #000;
+    border-bottom: 2px solid white;
+}
+  
+
+textarea::placeholder {
+    color:white;
+   @include titles(1.0rem,"OpenSans-Medium");
+    text-align: center;
+}
+
+input::placeholder {
+    color:white;
+   @include titles(1.0rem,"OpenSans-Medium");
+    text-align: center;
+}
+
+  

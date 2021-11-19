@@ -20,6 +20,9 @@ body{
 	-webkit-user-select: none; 
 	user-select: none; 
   position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0px auto ;
 }
 h1,
 h2,
@@ -28,11 +31,25 @@ h4,
 h5{
 @include titles(2rem,"OpenSans-Medium")
 }
+
+.arrow-up{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  width: 100px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+
 .container{
   margin: 0px auto;
   height: 100%;
   max-width: 1200px;
   padding: 0px 15px 0px;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 .main{
   width: 100%;

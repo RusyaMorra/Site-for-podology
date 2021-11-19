@@ -155,3 +155,32 @@ $breakpoints: (
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+
+//для адаптива
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up4 {
+  @media (max-width: 1440px) { @content; }
+}
+@mixin for-big-desktop-up3 {
+  @media (max-width: 1500px) { @content; }
+}
+@mixin for-big-desktop-up2 {
+  @media (max-width: 1750px) { @content; }
+}
+@mixin for-big-desktop-up1 {
+  @media (max-width: 1800px) { @content; }
+}

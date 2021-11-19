@@ -15,20 +15,21 @@
     <!--start body-->
     <body>
         <!--start header-->     
-        <header class="header">
+        <header class="header" id="header">
             <div class="container">
-                <div class="header-wrapper">
+                <div class="burgerwrapper"> <div id="clickonburger" class="burger"></div> </div>
+                <div class="header-wrapper" >
                     <div class="logo">
                     <a class="logo__link" href="" > <img class="logo-img" src="assets/images/logo.jpg" alt=""></a>
                     </div>
                     <nav class="menu"  id="navbar">
                         <ul class="header__menu">
-                            <li class="item menu-item menu-item--current"><a href="#" class="header__menu-link">главная</a></li>
-                            <li class="item menu-item"><a href="#" class="header__menu-link">Статьи</a></li>
-                            <li class="item menu-item"><a href="#" class="header__menu-link">Магазин</a></li>
-                            <li class="item menu-item"><a href="#" class="header__menu-link">услуги</a></li>
-                            <li class="item menu-item"><a href="#" class="header__menu-link">контакты</a></li>
-                            <li class="item menu-item"><a href="#" class="header__menu-link">О нас</a></li>
+                            <li class="itemi menu-item menu-item--current"><a href="#" class="header__menu-link">главная</a></li>
+                            <li class="itemi menu-item"><a href="#" class="header__menu-link">Статьи</a></li>
+                            <li class="itemi menu-item"><a href="#" class="header__menu-link">Магазин</a></li>
+                            <li class="itemi menu-item"><a href="#popup" class="header__menu-link">услуги</a></li>
+                            <li class="itemi menu-item"><a href="#contacts" class="header__menu-link">контакты</a></li>
+                            <li class="itemi menu-item"><a href="#about" class="header__menu-link">О нас</a></li>
                        </ul>
                     </nav>
                     <div class="wrapper-right flexself">
@@ -46,7 +47,7 @@
         <!--and header-->
 
         <!--start main--> 
-        <main class="main">
+        <main class="main" id="_up">
             <section class="intro-section">
                 <div class="section-wrapper">
                     <div class="container">
@@ -74,8 +75,8 @@
                 <div class="container">
                     <img class="background-gold__img-plate" src="assets/images/плашка.jpg" alt="">
                     <div class="link-wrapper">
-                        <a href="" class="background-gold__button-offer">Услуги</a>
-                        <a href="" class="background-gold__button-offer">Записаться</a>
+                        <a href="#popup" class="background-gold__button-offer">Услуги</a>
+                        <a href="#popup2" class="background-gold__button-offer">Записаться</a>
                     </div>
                 </div>
             </div>
@@ -232,19 +233,148 @@
                             <img src="assets/images/Mengobati-cantengan.jpg" alt="" class="text-wrapper-offer-section__img" >
                         </div>
                     </div>
-                    <div class="link-wrapper2"><a href="" class="background-gold__button-offer">Услуги</a></div>
+                    <div class="link-wrapper2"><a href="#popup" class="background-gold__button-offer">Услуги</a></div>
                 </div>
             </section>
             <section class="contacts">
                 <div class="container">
-                    <div class="contacts-background">
-
+                    <div class="contacts-background" id="contacts">
+                        <div class="contacts-background__contacts-text heading adress">Контакты</div>
+                        <div class="contacts-background__contacts-text name adress"><img width="50px" class="offset" src="assets/images/icons8-врач-женщина-80.png" alt="">Баяхметова Светлана Сергеевна</div>
+                        <div class="contacts-background__contacts-text number adress"><img width="50px" class="offset" src="assets/images/icons8-телефон-30.png" alt="">8(777)-285-73-41</div>
+                        <div class="contacts-background__contacts-text number adress"><img width="50px" class="offset" src="assets/images/icons8-whatsapp-50.png" alt="">8(777)-285-73-41</div>
+                        <div class="contacts-background__contacts-text adress"><img width="50px" class="offset" src="assets/images/icons8-адрес-50.png" alt="">Кабдолова  2-этаж 208a кабинет </div>
+                        <div class="contacts-background__contacts-text adress"><img width="50px" class="offset" src="assets/images/icons8-instagram-96.png" alt="">Podostudiocleopatra</div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-us" id="about">
+                <div class="container">
+                    <div class="about-us__text">О нас</div>
+                    <div class="about-us__main-text">
+                        Студия подологии которая находится в Алматы, основная суть нашей работы заключается в исправлении, корректирование, лечении, решении проблем ваших стоп и ногтей, в профилатики и лечении вросшего ногтя, грибковых поражений, прижигание бородавок, аппаратная обработка ногтей и многое другое.
+                    </div>
+                </div>
+            </section>
+            <section class="map-and-form">
+                <div class="container">
+                    <div class="map-and-form-wrapper">
+                        <div class="map-left"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fBfxW_hmV9TcIn9yzp05BzXvCFKtw_Sx" width="640" height="480"></iframe> </div>
+                        <div class="form-rigth">
+                            <form class="guruweba_example_form" name="feedback" method="POST" action="/feedback.php">
+                                <div class="guruweba_example_caption">Вы можите оставить заявку</div>
+                                <div class="form__name">Ваше имя</div>
+                                <input type="text" name="name"  required="required" placeholder="Ваше имя...">
+                                <div class="form__email">Ваш email</div>
+                                <input type="email" name="email" required="required" placeholder="Ваш email...">
+                                <div class="form__email">Ваш телефон</div>
+                                <input type="email" name="email" required="required" placeholder="Ваш телефон...">
+                                <div class="form__massage" >Сообщение</div>
+                                <textarea name="details" cols="30" rows="3" placeholder="Сообщение..."></textarea>
+                                <input class="btn-call btn-form" type="submit" name="submit_btn" value="Отправить" >
+                              </form>
+                        </div>
                     </div>
                 </div>
             </section>
         </main> 
         <!--and main-->   
-
+        <footer class="footer">
+            <div class="container">
+                <div class="content-footer-wrapper">
+                    <div class="left-part-footer-wrapper" >
+                        <div class="logo">
+                            <a class="logo__link" href="" > <img class="logo-img-footer" src="assets/images/logoready.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="right-part-footer-wrapper">
+                        <nav class="menu"  id="navbar">
+                            <ul class="header__menu footer-podition">
+                                <li class="itemi menu-item menu-item--current"><a href="#" class="header__menu-link">главная</a></li>
+                                <li class="itemi menu-item"><a href="#" class="header__menu-link">Статьи</a></li>
+                                <li class="itemi menu-item"><a href="#" class="header__menu-link">Магазин</a></li>
+                                <li class="itemi menu-item"><a href="#popup" class="header__menu-link">услуги</a></li>
+                                <li class="itemi menu-item"><a href="#contacts" class="header__menu-link">контакты</a></li>
+                                <li class="itemi menu-item"><a href="#about" class="header__menu-link">О нас</a></li>
+                           </ul>
+                        </nav>
+                        <div class="contacts-footer" >
+                            <div class="footer-contact-text"><img width="25px" class="offset" src="assets/images/icons8-врач-женщина-80.png" alt="">Баяхметова Светлана Сергеевна</div>
+                            <div class="footer-contact-text"><img width="25px" class="offset" src="assets/images/icons8-телефон-30.png" alt="">8(777)-285-73-41</div>
+                            <div class="footer-contact-text"><img width="25px" class="offset" src="assets/images/icons8-whatsapp-50.png" alt="">8(777)-285-73-41</div>
+                            <div class="footer-contact-text"><img width="25px" class="offset" src="assets/images/icons8-адрес-50.png" alt="">Кабдолова  2-этаж 208a кабинет </div>
+                           <a class="inst-link" href=""><div class="footer-contact-text"><img width="25px" class="offset" src="assets/images/icons8-instagram-96.png" alt="">Podostudiocleopatra</div></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="author-div">
+                <div class="container">
+                    <div class="footer2-wrapper">
+                        <div class="footer2">Copyright ©2021 All rights reserved | This template is made by <span class="span2">RusyaMorra</span></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div  id="popup" class="popup">
+            <a href="#header" target="_self" class="popup__area"></a>
+            <div class="popup__body">
+                <div class="popup__content">
+                    <div class="white-upper"></div>
+                    <a target="_self" href="#header" class="popup__close"><img class="cross" src="assets/images/icons8-крестик-xbox-50.png"  width="30px" alt=""></a>
+                    <div class="logo logo-popup">
+                        <a class="logo__link" href="" > <img class="logo-img-footer" src="assets/images/logoready.jpg" alt=""></a>
+                    </div>
+                    <div class="popup-text-offers">
+                        <div class="offer-popup">Аппаратный медицинский педикюр</div>        
+                        <div class="offer-popup">Медицинский маникюр с микозом</div>        
+                        <div class="offer-popup">Аппаратный медицинский маникюр</div>        
+                        <div class="offer-popup">Обработка одного микозного ногтя</div>        
+                        <div class="offer-popup">Обработка всех микозных ногтей (ноги)</div>        
+                        <div class="offer-popup">Обработка всех микозных ногтей (руки)</div>        
+                        <div class="offer-popup">Обработка  микозных ногтей и стоп</div>        
+                        <div class="offer-popup">Обработка  стоп</div>        
+                        <div class="offer-popup">Удаление стержневой  мозоли</div>        
+                        <div class="offer-popup">Лечение межпальцевой мозоли</div>        
+                        <div class="offer-popup">Установка тампонады</div>        
+                        <div class="offer-popup">Лечение ВПЧ(бородавки)(Исп.кислотой)</div>        
+                        <div class="offer-popup">Лечение ВПЧ(бородавки)(Herbitas, Verrugal)</div>        
+                        <div class="offer-popup">Лечение вросшего ногтя(I-II стадия)</div>        
+                        <div class="offer-popup">Лечение вросшего ногтя(III-IV стадия)</div>        
+                        <div class="offer-popup">Установка титановой нити(1ноготь)</div>        
+                        <div class="offer-popup">Установка скобы ЗТО(1ноготь) </div>        
+                        <div class="offer-popup">Установка скобы фрезера(1ноготь)</div>        
+                        <div class="offer-popup">Обработка после установки(т.н  - 1ноготь)</div>        
+                        <div class="offer-popup">Обработка после установки(скобы -1 ноготь)</div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  id="popup2" class="popup2">
+            <a href="#header" target="_self" class="popup__area2"></a>
+            <div class="popup__body2">
+                <div class="popup__content2">
+                    <a target="_self" href="#header" class="popup__close2"><img class="cross" src="assets/images/icons8-крестик-xbox-50.png"  width="30px" alt=""></a>
+                    <div class="logo logo-popup">
+                        <a class="logo__link" href="" > <img class="logo-img-footer" src="assets/images/logoready.jpg" alt=""></a>
+                    </div>
+                    <div class="form-rigth2">
+                        <form class="guruweba_example_form2" name="feedback" method="POST" action="/feedback.php">
+                            <div class="form__name">Ваше имя</div>
+                            <input type="text" name="name"  required="required" placeholder="Ваше имя...">
+                            <div class="form__email">Ваш email</div>
+                            <input type="email" name="email" required="required" placeholder="Ваш email...">
+                            <div class="form__email">Ваш телефон</div>
+                            <input type="email" name="email" required="required" placeholder="Ваш телефон...">
+                            <div class="form__massage" >Сообщение</div>
+                            <textarea name="details" cols="30" rows="3" placeholder="Сообщение..."></textarea>
+                            <input class="btn-call btn-form2" type="submit" name="submit_btn" value="Отправить" >
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#_up"><img src="assets/images/arrowup.png" alt="" class="arrow-up"></a>
         <script src="js/jquery.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/masonry-docs.min.js"></script>   
