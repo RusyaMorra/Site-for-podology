@@ -203,6 +203,7 @@
 
 .finger-wrapper__title{
     @include titles(1.9rem,"OpenSans-Medium"); 
+      color: white;
 }
 
 .finger-wrapper__images{
@@ -252,6 +253,11 @@
    margin-bottom: 80px;
    animation: pulse2  2s ease-in-out infinite;
 }
+
+
+
+
+
 
 
 .slider-wrapper{
@@ -453,6 +459,3 @@
 
 
 
-.slider__item-img{
-    margin-left:21px ;
-}

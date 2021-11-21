@@ -22,6 +22,7 @@
 }
 
 .text-wrapper-offer-section__inner-wrapper{
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -33,6 +34,9 @@
     height: 40%;
     padding-top: 130px;
     
+}
+.text-wrapper-offer-section__img{
+    height: 100%;
 }
 .text-wrapper-offer-section__img{
     width: 100%;
