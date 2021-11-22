@@ -74,7 +74,7 @@ lastScroll = scrollPosition();
 
 let brakepoint=900;
 let screen2 = window.innerWidth;
-console.log(screen2);
+
 if (screen2<900) {
   $(document).ready(function(){
   $('.slider').slick({
@@ -131,5 +131,102 @@ if (screen2<900) {
  
 }
 
+var slideout = new Slideout({
+  'panel': document.getElementById('panel'),
+  'menu': document.getElementById('menu'),
+  'padding': 256,
+  'tolerance': 70
+});
+
+// Toggle button
+document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();
+
+});
 
 
+
+
+
+ 
+//form validation and ajax
+
+document.addEventListener('DOMContentLoaded', function(){
+    const form = document.getElementById('form');
+    form.addEventListener('submit', formSend);
+    
+   async function formSend(e){
+      e.preventDefault();
+      let error = formValidate(form); 
+      let formData = new FormData(form);
+      
+        console.log(error);
+
+      if(error===0){
+        form.classList.add('_sending');
+        let response = await fetch('sendmail.php', {
+          method: 'POST',
+          body: formData
+        });
+        if(response.ok){
+            let result = await response.json();
+            alert(result.massage);
+            formPreview.innerHTML='';
+            form.reset(); 
+        }else{
+          alert('ошибка')
+        }
+      }else{
+       // alert('Заполните обязательные поля');
+      }
+    }
+
+    function formValidate(form){
+     let error = 0;
+     let formReq = document.querySelectorAll('._req');
+     for(let index = 0; index < formReq.length; index++){
+       const input = formReq[index];
+       formRemoveError(input);
+       
+       if(input.classList.contains('_email')){
+          if(emailTest(input)){
+            formAddError(input);
+            error++
+            if(phoneTest(input)){
+              formAddError(input);
+              error++
+              console.log(phoneTest(input));
+            }
+          }
+        }else{
+          if( input.value === ''){
+            formAddError(input);
+            error++
+            
+          }
+      }
+    }
+    return error;
+  }
+
+    function formAddError(input){
+      input.parentElement.classList.add('_error');
+      input.classList.add('_error');
+    }
+    function formRemoveError(input){
+      input.parentElement.classList.remove('_error');
+      input.classList.remove('_error');
+    }
+    
+    function emailTest(input){
+      return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
+    function phoneTest(input){
+      return /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(input.value);
+    }
+});
+
+
+/*else if(input.getAttribute('type')){
+
+          }*/

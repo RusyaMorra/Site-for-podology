@@ -403,13 +403,15 @@
     border: none;
     background: transparent;
     font-size: 0px;
-    background-image: url('../../assets/images/arrowslider.png') ;
+    background-image: url('../../assets/images/arrowslider.png')  ;
     background-size: 70px;
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 100;
+  
 }
 /* Стрелка вправо */
-.slick-arrow.slick-next{
+.slick-arrow.slick-next {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -424,6 +426,9 @@
     background-size: 70px;
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 100;
+    
+    
 }
 
 
