@@ -158,11 +158,10 @@ document.addEventListener('DOMContentLoaded', function(){
    async function formSend(e){
       e.preventDefault();
       let error = formValidate(form); 
+
       let formData = new FormData(form);
       
-        console.log(error);
-
-      if(error===0){
+      if(error===3){
         form.classList.add('_sending');
         let response = await fetch('sendmail.php', {
           method: 'POST',
@@ -173,8 +172,10 @@ document.addEventListener('DOMContentLoaded', function(){
             alert(result.massage);
             formPreview.innerHTML='';
             form.reset(); 
+            form.classList.remove('_sending');
         }else{
           alert('ошибка')
+          form.classList.remove('_sending');
         }
       }else{
        // alert('Заполните обязательные поля');
@@ -209,18 +210,21 @@ document.addEventListener('DOMContentLoaded', function(){
     return error;
   }
 
+    //добавляем стиль ошибки
     function formAddError(input){
       input.parentElement.classList.add('_error');
       input.classList.add('_error');
     }
+    //удаляем стиль ошибка
     function formRemoveError(input){
       input.parentElement.classList.remove('_error');
       input.classList.remove('_error');
     }
-    
+    //проверяем email на соответсвтие
     function emailTest(input){
       return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
+    //проверяем phone на соответсвтие
     function phoneTest(input){
       return /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(input.value);
     }
